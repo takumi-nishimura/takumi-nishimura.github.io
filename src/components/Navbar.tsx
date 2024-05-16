@@ -20,10 +20,16 @@ const Navbar: React.FC = () => {
             <Container maxWidth='md'>
                 <Toolbar style={toolbarStyle}>
                     <AnchorLink href='#home' style={{textDecoration: 'none', color: 'black'}} offset="90">
-                        <Typography variant='h5' marginRight={4}>nishi-folio</Typography>
+                        <Typography variant='h6' marginRight={4}>nishi-folio</Typography>
                     </AnchorLink>
                     <AnchorLink href='#profile' style={{textDecoration: 'none', color: 'black'}} offset="90">
-                            <Typography variant='h5' marginRight={4}>profile</Typography>
+                            <Typography variant='h6' marginRight={4}>profile</Typography>
+                    </AnchorLink>
+                    <AnchorLink href='#publication' style={{textDecoration: 'none', color: 'black'}} offset="90">
+                            <Typography variant='h6' marginRight={4}>publication</Typography>
+                    </AnchorLink>
+                    <AnchorLink href='#contact' style={{textDecoration: 'none', color: 'black'}} offset="90">
+                            <Typography variant='h6' marginRight={4}>contact</Typography>
                     </AnchorLink>
                 </Toolbar>
             </Container>

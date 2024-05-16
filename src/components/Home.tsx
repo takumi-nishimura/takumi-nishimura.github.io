@@ -4,9 +4,9 @@ import { ThemeProvider } from '@emotion/react';
 
 const Home: React.FC = () => {
     return (
-        <Box maxWidth='md' sx={{height: '90vh', backgroundColor: "#ffffff", opacity: 0.9, display:'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+        <Box maxWidth='xs' minWidth={250} sx={{height: '90vh', backgroundColor: "#ffffff", opacity: 0.9, display:'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
             <Typography variant='h2' component="div" sx={{ color: 'black'}}>Takumi Nishimura</Typography>
-            <Box sx={{height: '13%'}}/>
+            <Box sx={{height: '10%'}}/>
             <Box sx={{
                 width: "100%",
                 height: "50%",
