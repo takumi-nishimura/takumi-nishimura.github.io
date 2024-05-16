@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Test from './components/Test'
 import { Container } from '@mui/material';
 import Profile from './components/Profile';
 import Publication from './components/Publication';
