@@ -3,7 +3,7 @@ import React from "react";
 
 const Contact: React.FC = () => {
 return (
-    <Box sx={{height: '70vh'}}>
+    <Box sx={{height: '90vh'}} minHeight={800}>
         <Typography variant='h3' component="div" sx={{ color: 'black', marginBottom: 3}}>Contact</Typography>
         <Typography variant='h5' component="div" sx={{ color: 'black', marginTop: 3}}>Address</Typography>
         <Typography component="div" sx={{ color: 'black', marginLeft: 5, marginTop: 1}}>466-8555<br/>Nagoya Institute of Technology Gokiso-cho, Showa-ku, Nagoya, Japan</Typography>

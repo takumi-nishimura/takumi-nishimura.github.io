@@ -1,6 +1,5 @@
 import React from 'react';
-import {Box, Container, CssBaseline, Typography, createTheme} from '@mui/material';
-import { ThemeProvider } from '@emotion/react';
+import {Box, Typography} from '@mui/material';
 
 const Home: React.FC = () => {
     return (
