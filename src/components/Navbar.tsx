@@ -1,12 +1,11 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { Box, Container, Typography } from '@mui/material';
+import {Container, Typography} from '@mui/material';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Navbar: React.FC = () => {
     const toolbarStyle = {
-        minHeight: '80px',
         maxWidth: 'md',
         margin: 'auto',
     };
