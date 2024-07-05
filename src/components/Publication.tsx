@@ -3,7 +3,7 @@ import React from "react";
 
 const Publication: React.FC = () => {
 return (
-    <Box>
+    <Box sx={{height: '80vh'}} minHeight={1500}>
         <Typography variant='h3' component="div" sx={{ color: 'black', marginBottom: 3}}>Publication</Typography>
         <Typography variant='h5' component="div" sx={{ color: 'black'}}>Journal / Conference Papers</Typography>
         <ul>

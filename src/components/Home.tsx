@@ -3,7 +3,7 @@ import {Box, Typography} from '@mui/material';
 
 const Home: React.FC = () => {
     return (
-        <Box maxWidth='xs' minWidth={250} sx={{height: '90vh', backgroundColor: "#ffffff", opacity: 0.9, display:'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+        <Box maxWidth='md' minWidth='sm' sx={{height: '100vh', backgroundColor: "#ffffff", opacity: 0.9, display:'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
             <Typography variant='h2' component="div" sx={{ color: 'black'}}>Takumi Nishimura</Typography>
             <Box sx={{height: '10%'}}/>
             <Box sx={{
