@@ -13,6 +13,7 @@ const Publication: React.FC = () => {
                 <li style={{paddingBottom: '13px'}}>西村匠生, 湯川光, 萩原隆義, 南澤孝太, 田中由浩, 身体融合ロボットアバターにおける触覚フィードバックを用いた運動共有の検討, ロボティクス・メカトロニクス 講演会, 札幌, 6月,2022年.</li>
                 <li style={{paddingBottom: '13px'}}>西村匠生, 湯川光, 南澤孝太, 田中由浩, 身体融合ロボットアバターにおけるスイッチング融合の検討, 第24回計測自動制御学会システムインテグレーション部門講演会, 3ページ, 新潟, 12月14-16日, 2023年.</li>
                 <li style={{paddingBottom: '13px'}}>T. Nishimura, H. Yukawa, E. D. Ates, Y. Saraiji, F. Charith and Y. Tanaka, "Enhancing Sense of Agency in GUI-Based Teleoperation Through Robot Trajectory Generation Focused on Motor Imagery," 2024 IEEE/SICE International Symposium on System Integration (SII), Ha Long, Vietnam, 2024, DOI: <a href="https://doi.org/10.1109/SII58957.2024.10417642" target="_blank" rel="noreferrer">10.1109/SII58957.2024.10417642</a></li>
+                <li style={{paddingBottom: '13px'}}>西村匠生, 湯川光, 田中由浩, テキストで特性を操作可能なカーソルエージェント構築の基礎検討, 第42回 日本ロボット学会学術講演会, 4ページ, 大阪, 9月3-6日, 2024.</li>
             </ul>
             <Typography variant='h5' component="div" sx={{ color: 'black'}}>Demo</Typography>
             <ul>
