@@ -1,0 +1,4 @@
+title: nishi-site
+description: Takumi Nishimura's portfolio site.
+plugins:
+  - jekyll-sitemap
