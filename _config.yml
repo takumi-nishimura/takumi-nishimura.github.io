@@ -1,0 +1,5 @@
+title: nishi-site
+favicon: Haptics_Lab_black.png
+description: Takumi Nishimura's portfolio site.
+plugins:
+  - jekyll-sitemap
