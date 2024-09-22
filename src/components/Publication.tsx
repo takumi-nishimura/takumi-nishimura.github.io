@@ -17,7 +17,7 @@ const Publication: React.FC = () => {
             </ul>
             <Typography variant='h5' component="div" sx={{ color: 'black'}}>Demo</Typography>
             <ul>
-                <li style={{paddingBottom: '13px'}}>Takumi Nishimura, Hikari Yukawa, Kouta Minamizawa, Yoshihiro Tanaka, Experience System of Physical Skills with a Collaborative Avatar Robot, ICRA Expo in Yokohama, 2024.</li>
+                <li style={{paddingBottom: '13px'}}>Takumi Nishimura, Hikari Yukawa, Kouta Minamizawa, Yoshihiro Tanaka, Experience System of Physical Skills with a Collaborative Avatar Robot, ICRA Expo in Yokohama, 2024. <a href="https://youtu.be/hetdur2TwV4" target="_blink" rel="noreferrer">[Video]</a></li>
             </ul>
             <Typography variant='h5' component="div" sx={{ color: 'black'}}>Workshop</Typography>
             <ul>
