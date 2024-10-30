@@ -10,7 +10,7 @@ return (
         <Typography variant='h5' component="div" sx={{ color: 'black', marginTop: 3}}>E-Mail</Typography>
         <Typography component="div" sx={{ color: 'black', marginLeft: 5, marginTop: 1}}>clp13218[at]nitech.jp</Typography>
         <Typography variant='h5' component="div" sx={{ color: 'black', marginTop: 3}}>SNS</Typography>
-        <Typography component="div" sx={{ color: 'black', marginLeft: 5, marginTop: 1}}>X <a href="https://twitter.com/takumi_ni4" target="_blank" rel="noreferrer">@takumi_ni4</a><br/>Facebook <a href="https://www.facebook.com/profile.php?id=100028314154172" target="_blank" rel="noreferrer">西村匠生</a></Typography>
+        <Typography component="div" sx={{ color: 'black', marginLeft: 5, marginTop: 1}}>X <a href="https://twitter.com/takumi_ni4" target="_blank" rel="noreferrer">@takumi_ni4</a><br/>Facebook <a href="https://www.facebook.com/profile.php?id=100028314154172" target="_blank" rel="noreferrer">西村匠生</a><br/>GitHub <a href="https://github.com/takumi-nishimura" target="_blank" rel="noreferrer">takumi-nishimura</a></Typography>
     </Box>
 );
 };
