@@ -21,8 +21,8 @@ const Publication: React.FC = () => {
             </ul>
             <Typography variant='h5' component="div" sx={{ color: 'black'}}>Workshop</Typography>
             <ul>
-                <li style={{paddingBottom: '13px'}}><a href="https://cybernetic-being.org/works/virtual-avatar-cafe/" target="_blink" rel="noreferrer">2人で1人!? 共創アバターロボット実験 in 分身ロボットカフェ DAWN ver.β</a></li>
-                <li style={{paddingBottom: '13px'}}><a href="https://cybernetic-being.org/works/virtual-avatar-cafe/" target="_blink" rel="noreferrer">サイバネティックアバターで働き方はどう変わる？<br /> Cybernetic Avatar Experiment in 分身ロボットカフェ DAWN ver.β</a></li>
+                <li style={{paddingBottom: '13px'}}><a href="https://cybernetic-being.org/activities/202210_collaborative_avatar_experiment_release/" target="_blink" rel="noreferrer">2人で1人!? 共創アバターロボット実験 in 分身ロボットカフェ DAWN ver.β</a></li>
+                <li style={{paddingBottom: '13px'}}><a href="https://cybernetic-being.org/activities/202304-cybernetic_avatar_experiment/" target="_blink" rel="noreferrer">サイバネティックアバターで働き方はどう変わる？<br /> Cybernetic Avatar Experiment in 分身ロボットカフェ DAWN ver.β</a></li>
             </ul>
         </Box>
     );
