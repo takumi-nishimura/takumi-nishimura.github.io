@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_folio=self.webpackChunkmy_folio||[]).push([[919],{919:(e,s,c)=>{c.d(s,{createInfoServices:()=>f.v});var f=c(3690);c(1855)}}]);
