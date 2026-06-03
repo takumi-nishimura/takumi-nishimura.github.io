@@ -5,7 +5,8 @@ const Home: React.FC = () => {
     return (
         <Box maxWidth='md' minWidth='sm' sx={{height: '100vh', backgroundColor: "#ffffff", opacity: 0.9, display:'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
             <Typography variant='h2' component="div" sx={{ color: 'black'}}>Takumi Nishimura</Typography>
-            <Box sx={{height: '10%'}}/>
+            <Typography variant='h6' component="div" sx={{ color: '#555', marginTop: 1, fontWeight: 400, textAlign: 'center', letterSpacing: '0.05em'}}>Human-AI Collaboration · Avatar Robots · Haptics</Typography>
+            <Box sx={{height: '8%'}}/>
             <Box sx={{
                 width: "100%",
                 height: "50%",
