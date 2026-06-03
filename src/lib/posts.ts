@@ -10,12 +10,16 @@ export type PostMeta = {
     summary: string;
 };
 
+type Seed = { index: PostMeta[]; bodies: Record<string, string> };
+
 const base = process.env.PUBLIC_URL ?? '';
 
-export async function loadPostIndex(): Promise<PostMeta[]> {
-    const res = await fetch(`${base}/posts/index.json`, { cache: 'no-cache' });
-    if (!res.ok) throw new Error(`failed to load post index: ${res.status}`);
-    return (await res.json()) as PostMeta[];
+// scripts/prerender.mjs injects window.__PRERENDER__ into each static page so
+// the first client render shows content synchronously (no fetch/loading flash
+// on a direct landing from search).
+function seed(): Seed | null {
+    if (typeof window === 'undefined') return null;
+    return (window as unknown as { __PRERENDER__?: Seed }).__PRERENDER__ ?? null;
 }
 
 // Strip an optional YAML frontmatter block so the rendered body stays clean
@@ -31,7 +35,27 @@ function stripFrontmatter(md: string): string {
     return md;
 }
 
+// Synchronous seeded accessors, used to initialise component state.
+export function seededIndex(): PostMeta[] | null {
+    return seed()?.index ?? null;
+}
+
+export function seededBody(slug: string): string | null {
+    const raw = seed()?.bodies?.[slug];
+    return raw != null ? stripFrontmatter(raw) : null;
+}
+
+export async function loadPostIndex(): Promise<PostMeta[]> {
+    const seeded = seededIndex();
+    if (seeded) return seeded;
+    const res = await fetch(`${base}/posts/index.json`, { cache: 'no-cache' });
+    if (!res.ok) throw new Error(`failed to load post index: ${res.status}`);
+    return (await res.json()) as PostMeta[];
+}
+
 export async function loadPostBody(slug: string): Promise<string> {
+    const seeded = seededBody(slug);
+    if (seeded != null) return seeded;
     const res = await fetch(`${base}/posts/${slug}.md`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`failed to load post: ${res.status}`);
     return stripFrontmatter(await res.text());

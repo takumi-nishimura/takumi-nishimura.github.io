@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box, Card, CardActionArea, CardContent, Typography } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { loadPostIndex, PostMeta } from '../lib/posts';
+import { Helmet } from 'react-helmet-async';
+import { loadPostIndex, seededIndex, PostMeta } from '../lib/posts';
 
 const BlogList: React.FC = () => {
-    const [posts, setPosts] = React.useState<PostMeta[] | null>(null);
+    const [posts, setPosts] = React.useState<PostMeta[] | null>(seededIndex());
     const [error, setError] = React.useState<string | null>(null);
 
     React.useEffect(() => {
@@ -15,6 +16,12 @@ const BlogList: React.FC = () => {
 
     return (
         <Box sx={{ minHeight: '80vh', paddingTop: 4, paddingBottom: 8 }}>
+            <Helmet>
+                <title>Blog | Takumi Nishimura</title>
+                <meta name='description' content='Takumi Nishimura のブログ. 研究やツール開発に関する記事.' />
+                <meta property='og:title' content='Blog | Takumi Nishimura' />
+                <meta property='og:type' content='website' />
+            </Helmet>
             <Typography variant='h3' component='div' sx={{ color: 'black', marginBottom: 3 }}>Blog</Typography>
 
             {error && (

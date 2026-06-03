@@ -1,20 +1,25 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Link as RouterLink, useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { loadPostBody, loadPostIndex, PostMeta } from '../lib/posts';
+import { loadPostBody, loadPostIndex, seededIndex, seededBody, PostMeta } from '../lib/posts';
 import CodeBlock from './CodeBlock';
 import Mermaid from './Mermaid';
 
 const BlogPost: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
-    const [meta, setMeta] = React.useState<PostMeta | null>(null);
-    const [body, setBody] = React.useState<string | null>(null);
+    // seed from the prerendered payload so a direct landing renders instantly
+    const [meta, setMeta] = React.useState<PostMeta | null>(
+        () => seededIndex()?.find((p) => p.slug === slug) ?? null,
+    );
+    const [body, setBody] = React.useState<string | null>(() => (slug ? seededBody(slug) : null));
     const [notFound, setNotFound] = React.useState(false);
 
     React.useEffect(() => {
         if (!slug) return;
+        if (meta && body !== null) return; // already seeded
         let active = true;
         (async () => {
             try {
@@ -36,6 +41,7 @@ const BlogPost: React.FC = () => {
         return () => {
             active = false;
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [slug]);
 
     if (notFound) {
@@ -51,6 +57,16 @@ const BlogPost: React.FC = () => {
 
     return (
         <Box sx={{ minHeight: '80vh', paddingTop: 4, paddingBottom: 8 }}>
+            {meta && (
+                <Helmet>
+                    <title>{`${meta.title} | Takumi Nishimura`}</title>
+                    <meta name='description' content={meta.summary} />
+                    <meta property='og:title' content={meta.title} />
+                    <meta property='og:description' content={meta.summary} />
+                    <meta property='og:type' content='article' />
+                    <meta property='og:url' content={`https://takumi-nishimura.github.io/blog/${meta.slug}`} />
+                </Helmet>
+            )}
             <Typography sx={{ marginBottom: 2 }}>
                 <RouterLink className='link' to='/blog'>← Blog</RouterLink>
             </Typography>
