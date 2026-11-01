@@ -1,8 +1,8 @@
 [
   {
     "slug": "marpagent",
-    "title": "MarpAgent: Marpによるスライド作成を構造化し, 自動検証するCLI",
+    "title": "MarpAgent: Markdownでスライドを作り，描画を見て仕上げる",
     "date": "2026-06-03",
-    "summary": "brief から outline, slide.md, そして HTML / PDF / PPTX まで. Claude Code のようなエージェントにスライドを書かせることを前提に, テーマ/Tailwindでの見た目制御, レーザーポインタ付きプレゼンモード, オーバービュー, 自動検証までを備えた自作CLI MarpAgent (marpx) を紹介する."
+    "summary": "AIエージェントとMarkdownの原稿を改稿し，描画を見ながら仕上げる自作ツールMarpAgentを紹介する．最初の1枚の試作から，テーマと配置，表示崩れの検証，発表・配布まで，現在の作例と使い始め方をまとめる．"
   }
 ]
