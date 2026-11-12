@@ -44,3 +44,29 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Publishing to GitHub Pages
+
+Updates pushed or merged into `main` are automatically built and published by
+[Deploy GitHub Pages](https://github.com/takumi-nishimura/takumi-nishimura.github.io/actions/workflows/deploy-pages.yml).
+The workflow installs locked dependencies, builds the site, prerenders every blog
+route, verifies the output, and deploys the resulting artifact. A failed build or
+verification does not replace the published site.
+
+Repository Settings → Pages → Source is **GitHub Actions**. The historical
+`gh-pages` branch is retained, but is no longer the publishing source.
+The old `npm run deploy` command only updates that legacy branch; do not use it
+for current publication. To publish again without a new commit, select
+**Run workflow** on the workflow page and choose `main`.
+
+To validate the production output locally:
+
+```sh
+npm ci
+npx playwright install chromium
+npm run build
+npm run prerender
+```
+
+On a Linux machine without Chromium system libraries, use
+`npx playwright install --with-deps chromium`.
